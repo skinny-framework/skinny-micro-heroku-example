@@ -8,6 +8,10 @@ This simle project shows you how to deploy Skinny Micro apps to [Heroku](https:/
 
 https://devcenter.heroku.com/articles/getting-started-with-scala
 
+### Screenshot
+
+![Screenshot](https://raw.githubusercontent.com/skinny-framework/skinny-micro-heroku-example/master/screenshot.png)
+
 ### License 
 
 the MIT License
