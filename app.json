@@ -1,0 +1,10 @@
+{
+  "name": "Skinny Micro Heroku Example",
+  "description": "A simple example to show you how to deploy Skinny Micro apps to Heroku platform ",
+  "keywords": ["Scala"],
+  "website": "http://skinny-framework.org/",
+  "repository": "https://github.com/skinny-framework/skinny-micro-heroku-example",
+  "logo": "https://github.com/seratch/skinny-framework/raw/master/img/logo.png",
+  "success_url": "/"
+}
+
