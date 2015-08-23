@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Simple JSON Formatter</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <hr/>
+  <h3>Simple JSON Formatter</h3>
+  <hr/>
+  <div class="form-group">
+    <textarea id="input" class="form-control" rows=10></textarea>
+  </p>
+  <hr/>
+  <p>
+    <pre id="prettified">
+
+
+  (Prettified JSON value will appear here)
+
+    
+</pre>
+  </p>
+  <hr/>
+  <p>
+    <pre id="minified">
+
+
+  (Minified JSON value will appear here)
+
+    
+</pre>
+  </p>
+</div>
+<script>
+(function() {
+  var commonAttributes = {
+    type: 'POST',
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'text'
+  };
+  $('#input').bind('blur', function() {
+    var req = jQuery.extend(true, {}, commonAttributes);
+    req.url = '/prettify';
+    req.data = $('#input').val();
+    req.success = function(data) { $('#prettified')[0].innerHTML = data; };
+    $.ajax(req);
+  });
+  $('#input').bind('blur', function() {
+    var req = jQuery.extend(true, {}, commonAttributes);
+    req.url = '/minify';
+    req.data = $('#input').val();
+    req.success = function(data) { $('#minified')[0].innerHTML = data; };
+    $.ajax(req);
+  });
+})();
+</script>
+</body>
+</html>
