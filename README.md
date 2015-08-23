@@ -1,4 +1,4 @@
-## Skinnny Micro Heroku Deploy Project
+## Skinnny Micro Heroku Deployment Demo
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
