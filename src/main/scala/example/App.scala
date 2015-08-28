@@ -1,11 +1,9 @@
 package example
 
-import skinny.json.DefaultJSONStringOps
 import skinny.micro._
-import skinny.micro.response._
-import skinny.micro.scalate.ScalateSupport
+import skinny.micro.contrib.{ JSONSupport, ScalateSupport }
 
-object App extends AsyncWebApp with DefaultJSONStringOps with ScalateSupport {
+object App extends AsyncWebApp with JSONSupport with ScalateSupport {
 
   get("/") { implicit ctx =>
     contentType = "text/html"

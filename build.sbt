@@ -24,4 +24,4 @@ lazy val root = (project in file("."))
   .settings(scalariformSettings)
   .settings(com.typesafe.sbt.SbtStartScript.startScriptForClassesSettings)
 
-lazy val skinnyMicroVersion = "0.9.3"
+lazy val skinnyMicroVersion = "0.9.6"
