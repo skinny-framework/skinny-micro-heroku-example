@@ -1,7 +1,6 @@
 package example
 
 import skinny.test.SkinnyFunSpec
-import skinny.json.DefaultJSONStringOps
 
 class AppSpec extends SkinnyFunSpec {
   addFilter(App, "/*")

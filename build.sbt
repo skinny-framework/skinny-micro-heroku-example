@@ -5,6 +5,7 @@ lazy val root = (project in file("."))
     version := "0.1",
     scalaVersion := "2.11.7",
     resolvers += "sonatype releases" at "https://oss.sonatype.org/content/repositories/releases",
+    dependencyOverrides := Set("org.scala-lang" %  "scala-compiler" % scalaVersion.value), // for Scalate
     libraryDependencies ++= Seq(
       "org.skinny-framework" %% "skinny-micro"         % skinnyMicroVersion % Compile,
       "org.skinny-framework" %% "skinny-micro-server"  % skinnyMicroVersion % Compile,
@@ -24,4 +25,4 @@ lazy val root = (project in file("."))
   .settings(scalariformSettings)
   .settings(com.typesafe.sbt.SbtStartScript.startScriptForClassesSettings)
 
-lazy val skinnyMicroVersion = "0.9.6"
+lazy val skinnyMicroVersion = "0.9.8"
