@@ -1,7 +1,8 @@
 package example
 
 import skinny.micro._
-import skinny.micro.contrib.{ JSONSupport, ScalateSupport }
+import skinny.micro.contrib.ScalateSupport
+import skinny.micro.contrib.jackson.JSONSupport
 import scala.util._
 
 object App extends AsyncWebApp with JSONSupport with ScalateSupport {
