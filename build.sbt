@@ -11,7 +11,7 @@ lazy val root = (project in file("."))
       "org.skinny-framework" %% "skinny-micro-server"  % skinnyMicroVersion % Compile,
       "org.skinny-framework" %% "skinny-micro-jackson" % skinnyMicroVersion % Compile,
       "org.skinny-framework" %% "skinny-micro-scalate" % skinnyMicroVersion % Compile,
-      "org.eclipse.jetty"    %  "jetty-webapp"         % "9.2.13.v20150730" % "container",
+      "org.eclipse.jetty"    %  "jetty-webapp"         % "9.2.14.v20151106" % "container",
       "org.skinny-framework" %% "skinny-micro-test"    % skinnyMicroVersion % Test
     ),
     mainClass in Compile := Some("skinny.standalone.JettyLauncher"),
@@ -25,4 +25,4 @@ lazy val root = (project in file("."))
   .settings(scalariformSettings)
   .settings(com.typesafe.sbt.SbtStartScript.startScriptForClassesSettings)
 
-lazy val skinnyMicroVersion = "0.9.12"
+lazy val skinnyMicroVersion = "1.0.+"
