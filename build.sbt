@@ -11,7 +11,7 @@ lazy val root = (project in file("."))
       "org.skinny-framework" %% "skinny-micro-server"  % skinnyMicroVersion % Compile,
       "org.skinny-framework" %% "skinny-micro-jackson" % skinnyMicroVersion % Compile,
       "org.skinny-framework" %% "skinny-micro-scalate" % skinnyMicroVersion % Compile,
-      "org.eclipse.jetty"    %  "jetty-webapp"         % "9.2.14.v20151106" % "container",
+      "org.eclipse.jetty"    %  "jetty-webapp"         % "9.2.15.v20160210" % "container",
       "org.skinny-framework" %% "skinny-micro-test"    % skinnyMicroVersion % Test
     ),
     mainClass in Compile := Some("skinny.standalone.JettyLauncher"),
