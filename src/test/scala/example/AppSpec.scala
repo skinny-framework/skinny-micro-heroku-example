@@ -17,7 +17,7 @@ class AppSpec extends SkinnyFunSpec {
       post("/minify", """{"name"   :    "Alice"}""".getBytes) {
         status should equal(200)
         body should equal("""{"name":"Alice"}""".stripMargin)
-        header("Content-Type") should equal("application/json; charset=UTF-8")
+        header("Content-Type") should equal("application/json;charset=utf-8")
       }
     }
 
@@ -27,7 +27,7 @@ class AppSpec extends SkinnyFunSpec {
         body should equal("""{
            |  "name" : "Alice"
            |}""".stripMargin)
-        header("Content-Type") should equal("application/json; charset=UTF-8")
+        header("Content-Type") should equal("application/json;charset=utf-8")
       }
     }
   }

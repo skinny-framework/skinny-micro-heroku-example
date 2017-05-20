@@ -3,7 +3,7 @@ lazy val root = (project in file("."))
     organization := "org.skinny-framework",
     name := "skinny-micro-heroku-example",
     version := "0.1",
-    scalaVersion := "2.11.8",
+    scalaVersion := "2.12.2",
     resolvers += "sonatype releases" at "https://oss.sonatype.org/content/repositories/releases",
     dependencyOverrides := Set("org.scala-lang" %  "scala-compiler" % scalaVersion.value), // for Scalate
     libraryDependencies ++= Seq(
@@ -11,7 +11,7 @@ lazy val root = (project in file("."))
       "org.skinny-framework" %% "skinny-micro-server"  % skinnyMicroVersion % Compile,
       "org.skinny-framework" %% "skinny-micro-jackson" % skinnyMicroVersion % Compile,
       "org.skinny-framework" %% "skinny-micro-scalate" % skinnyMicroVersion % Compile,
-      "org.eclipse.jetty"    %  "jetty-webapp"         % "9.2.18.v20160721" % "container",
+      "org.eclipse.jetty"    %  "jetty-webapp"         % "9.3.19.v20170502" % "container",
       "org.skinny-framework" %% "skinny-micro-test"    % skinnyMicroVersion % Test
     ),
     mainClass in Compile := Some("skinny.standalone.JettyLauncher"),
@@ -25,4 +25,4 @@ lazy val root = (project in file("."))
   .settings(scalariformSettings)
   .settings(com.typesafe.sbt.SbtStartScript.startScriptForClassesSettings)
 
-lazy val skinnyMicroVersion = "1.1.+"
+lazy val skinnyMicroVersion = "1.2.+"
